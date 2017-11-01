@@ -36,7 +36,6 @@ class Modal extends Component {
     };
 
     render() {
-        console.log('========+++', this.props)
         return null;
     }
 }

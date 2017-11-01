@@ -16,9 +16,8 @@ if (!(emitter instanceof EventEmitter)) {
     emitter = new EventEmitter();
     // inject modals into app entry component
     const originRegister = AppRegistry.registerComponent;
-    console.log('Inject registerComponent')
+
     AppRegistry.registerComponent = function (appKey, getAppComponent) {
-        console.log('Call injected registerComponent')
         const siblings = new Map();
         const updates = new Set();
 
