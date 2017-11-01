@@ -1,5 +1,45 @@
 import Platform from 'react-native-web/dist/apis/Platform'
+import Dimensions from 'react-native-web/dist/apis/Dimensions'
 import { Linking } from 'react-navigation/lib/PlatformHelpers'
+
+const dimensions = {
+  window: {
+    width: 325,
+    height: 576
+  }
+}
+
+const listeners = {}
+
+Object.assign(Dimensions, {
+  get(dimension) {
+    return dimensions[dimension]
+  },
+
+  set(newDimensions) {
+    Object.assign(dimensions, newDimensions)
+  },
+
+  emit(type, ...args) {
+    if (Array.isArray(listeners[type])) {
+      listeners[type].forEach(handler => handler(...args))
+    }
+  },
+
+  addEventListener(type, handler) {
+    listeners[type] = listeners[type] || []
+    listeners[type].push(handler)
+  },
+
+  removeEventListener(type, handler) {
+    if (Array.isArray(listeners[type])) {
+      listeners[type] = listeners[type].filter(_handler => _handler !== handler)
+    }
+  },
+
+  // TODO: update dimensions when orientation or size changed
+  _update() {}
+})
 
 Linking.getInitialURL = () => {
   return new Promise(resolve => {
