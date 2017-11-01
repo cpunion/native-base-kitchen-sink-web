@@ -7,4 +7,4 @@ const Modal = require('./Modal')
 
 ReactNative.Modal = Modal
 
-require('./index.ios')
+require('./App')
