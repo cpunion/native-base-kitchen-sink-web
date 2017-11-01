@@ -36,7 +36,7 @@
     "react": "^16.0.0",
     "react-dev-utils": "^4.1.0",
     "react-dom": "^16.0.0",
-    "react-native-web": "^0.1.12",
+    "react-native-web": "^0.1.13",
     "react-navigation": "^1.0.0-beta.15",
     "style-loader": "0.18.2",
     "sw-precache-webpack-plugin": "0.11.4",
