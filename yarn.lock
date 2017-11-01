@@ -5598,6 +5598,19 @@ react-native-easy-grid@0.1.15:
     prop-types "^15.5.10"
     react-timer-mixin "^0.13.3"
 
+react-native-root-modal@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-root-modal/-/react-native-root-modal-1.4.0.tgz#632aab3defd77bf88abdbc8b5dd32f0567dab2ee"
+  dependencies:
+    prop-types "^15.5.10"
+    react-native-root-siblings "^1.2.1"
+
+react-native-root-siblings@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-native-root-siblings/-/react-native-root-siblings-1.2.1.tgz#6f8d0e711dbf9aef4e57e73aea751372b5aefcff"
+  dependencies:
+    static-container "^1.0.0"
+
 react-native-tab-view@^0.0.69:
   version "0.0.69"
   resolved "https://registry.yarnpkg.com/react-native-tab-view/-/react-native-tab-view-0.0.69.tgz#f52d4354a98a382f10eb5fcf61db5216c91dc7e7"
@@ -6300,6 +6313,10 @@ sshpk@^1.7.0:
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
 
+static-container@^1.0.0, static-container@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/static-container/-/static-container-1.2.0.tgz#1c6e92b869da47d32abe47f45f50bf39661d9c2f"
+
 "statuses@>= 1.3.1 < 2":
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/statuses/-/statuses-1.4.0.tgz#bb73d446da2796106efcc1b601a253d6c46bd087"
@@ -6977,6 +6994,10 @@ widest-line@^1.0.0:
 window-size@0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/window-size/-/window-size-0.1.0.tgz#5438cd2ea93b202efa3a19fe8887aee7c94f9c9d"
+
+wolfy87-eventemitter@^5.2.3:
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/wolfy87-eventemitter/-/wolfy87-eventemitter-5.2.3.tgz#e09979b4e7d8d5256e3a25e811529ba143115568"
 
 wordwrap@0.0.2:
   version "0.0.2"

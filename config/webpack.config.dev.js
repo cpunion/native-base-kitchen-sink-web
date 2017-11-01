@@ -155,7 +155,9 @@ module.exports = {
               path.resolve(paths.appNodeModules, 'react-native-easy-grid'),
               path.resolve(paths.appNodeModules, 'react-native-web'),
               path.resolve(paths.appNodeModules, 'react-native-tab-view'),
-              path.resolve(paths.appNodeModules, 'react-native-tab-view'),
+              path.resolve(paths.appNodeModules, 'react-native-root-modal'),
+              path.resolve(paths.appNodeModules, 'react-native-root-siblings'),
+              path.resolve(paths.appNodeModules, 'static-container'),
             ],
             loader: require.resolve('babel-loader'),
             options: {

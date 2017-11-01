@@ -26,4 +26,4 @@ console.error = function(arg, ...args) {
   oldError(arg, ...args)
 }
 
-require('./index.ios')
+require('./main')

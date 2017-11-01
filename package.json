@@ -36,15 +36,18 @@
     "react": "^16.0.0",
     "react-dev-utils": "^4.1.0",
     "react-dom": "^16.0.0",
+    "react-native-root-modal": "^1.4.0",
     "react-native-web": "^0.1.13",
     "react-navigation": "^1.0.0-beta.15",
+    "static-container": "^1.2.0",
     "style-loader": "0.18.2",
     "sw-precache-webpack-plugin": "0.11.4",
     "url-loader": "0.5.9",
     "webpack": "3.5.1",
     "webpack-dev-server": "2.8.2",
     "webpack-manifest-plugin": "1.2.1",
-    "whatwg-fetch": "2.0.3"
+    "whatwg-fetch": "2.0.3",
+    "wolfy87-eventemitter": "^5.2.3"
   },
   "scripts": {
     "start": "node scripts/start.js",
