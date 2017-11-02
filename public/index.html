@@ -19,13 +19,50 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Run NativeBase-KitchenSink on react-native-web</title>
+    <link href="%PUBLIC_URL%/devices.min.css" rel="stylesheet" />
+    <style>
+      .marvel-device.iphone8.black {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #root {
+        z-index: 3;
+      }
+      body {
+        background-color: black;
+        padding: 40px;
+      }
+      h1 {
+        color: grey;
+        text-align: center;
+      }
+      a {
+        color: #fc0;
+      }
+    </style>
   </head>
   <body>
+    <a href="https://github.com/cpunion/native-base-kitchen-sink-web"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"></a>
+    <h1>Run <a href="https://github.com/GeekyAnts/NativeBase-KitchenSink">NativeBase-KitchenSink</a> on <a href="https://github.com/necolas/react-native-web">react-native-web</a></h1>
+    <p>Has some style/layout issues yet.</p>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root" style="width: 327px; height: 578px; margin: 30px; border: solid 1px black; overflow: hidden; display: flex; position: relative;"></div>
+    <div class="marvel-device iphone8 black">
+      <div class="top-bar"></div>
+      <div class="sleep"></div>
+      <div class="volume"></div>
+      <div class="camera"></div>
+      <div class="sensor"></div>
+      <div class="speaker"></div>
+      <div class="screen" id="root">
+          <!-- Content goes here -->
+      </div>
+      <div class="home"></div>
+      <div class="bottom-bar"></div>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
