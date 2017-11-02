@@ -88,12 +88,13 @@ module.exports = {
     // https://github.com/facebookincubator/create-react-app/issues/290
     // `web` extension prefixes have been added for better support
     // for React Native Web.
-    extensions: ['.web.js', '.js', '.json', '.web.jsx', '.jsx'],
+    extensions: ['.web.js', '.js', '.json', '.web.jsx', '.jsx', '.ios.js'],
     alias: {
       
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
-      'react-native': 'react-native-web',
+      'react-native/Libraries/Renderer/shims/ReactNativePropRegistry': 'react-native-web/src/modules/ReactNativePropRegistry',
+      'react-native': 'react-native-web'
     },
     plugins: [
       // Prevents users from importing files from outside of src/ (or node_modules/).
@@ -146,7 +147,21 @@ module.exports = {
           // Process JS with Babel.
           {
             test: /\.(js|jsx)$/,
-            include: paths.appSrc,
+            include: [
+              paths.appSrc,
+              path.resolve(paths.appNodeModules, 'native-base-shoutem-theme'),
+              path.resolve(paths.appNodeModules, 'react-navigation'),
+              path.resolve(paths.appNodeModules, 'react-native-easy-grid'),
+              path.resolve(paths.appNodeModules, 'react-native-drawer'),
+              path.resolve(paths.appNodeModules, 'react-native-vector-icons'),
+              path.resolve(paths.appNodeModules, 'react-native-keyboard-aware-scroll-view'),
+              path.resolve(paths.appNodeModules, 'react-native-easy-grid'),
+              path.resolve(paths.appNodeModules, 'react-native-web'),
+              path.resolve(paths.appNodeModules, 'react-native-tab-view'),
+              path.resolve(paths.appNodeModules, 'react-native-root-modal'),
+              path.resolve(paths.appNodeModules, 'react-native-root-siblings'),
+              path.resolve(paths.appNodeModules, 'static-container'),
+            ],
             loader: require.resolve('babel-loader'),
             options: {
               
