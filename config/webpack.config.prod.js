@@ -160,6 +160,7 @@ module.exports = {
               path.resolve(paths.appNodeModules, 'react-native-tab-view'),
               path.resolve(paths.appNodeModules, 'react-native-root-modal'),
               path.resolve(paths.appNodeModules, 'react-native-root-siblings'),
+              path.resolve(paths.appNodeModules, 'react-native-iphone-x-helper'),
               path.resolve(paths.appNodeModules, 'static-container'),
             ],
             loader: require.resolve('babel-loader'),
