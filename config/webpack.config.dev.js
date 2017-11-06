@@ -89,7 +89,7 @@ module.exports = {
       
       // Support React Native Web
       // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
-      'react-native/Libraries/Renderer/shims/ReactNativePropRegistry': 'react-native-web/src/modules/ReactNativePropRegistry',
+      'react-native/Libraries/Renderer/shims/ReactNativePropRegistry': 'react-native-web/dist/modules/ReactNativePropRegistry',
       'react-native': 'react-native-web'
     },
     plugins: [

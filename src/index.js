@@ -1,6 +1,9 @@
+import RN from 'react-native-web'
 import Platform from 'react-native-web/dist/apis/Platform'
 import Dimensions from 'react-native-web/dist/apis/Dimensions'
 import { Linking } from 'react-navigation/lib/PlatformHelpers'
+
+RN.DeviceInfo = {}
 
 const dimensions = {
   window: {
