@@ -21,6 +21,7 @@
     -->
     <title>Run NativeBase-KitchenSink on react-native-web</title>
     <link href="%PUBLIC_URL%/devices.min.css" rel="stylesheet" />
+    <script src="%PUBLIC_URL%/mobile-detect.min.js"></script>
     <style>
       .marvel-device.iphone8.black {
         display: block;
@@ -37,8 +38,12 @@
       div {
         border-width: thin;
       }
-      h1 {
+      h1.title {
         color: grey;
+        text-align: center;
+      }
+      p.desc {
+        color: white;
         text-align: center;
       }
       a {
@@ -48,12 +53,13 @@
   </head>
   <body>
     <a href="https://github.com/cpunion/native-base-kitchen-sink-web"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"></a>
-    <h1>Run <a href="https://github.com/GeekyAnts/NativeBase-KitchenSink">NativeBase-KitchenSink</a> on <a href="https://github.com/necolas/react-native-web">react-native-web</a></h1>
-    <p>Has some style/layout issues yet.</p>
+    <h1 class="title">Run <a href="https://github.com/GeekyAnts/NativeBase-KitchenSink">NativeBase-KitchenSink</a> on <a href="https://github.com/necolas/react-native-web">react-native-web</a></h1>
+    <p class="desc">Has some style/layout issues yet.</p>
+    <p classs="desc">Switch your browser to responsive preview mode and refresh if you meet some problem.</p>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div class="marvel-device iphone8 black">
+    <div id="mobile-frame" class="marvel-device iphone8 black">
       <div class="top-bar"></div>
       <div class="sleep"></div>
       <div class="volume"></div>
@@ -76,5 +82,22 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      function checkMobile() {
+        var md = new MobileDetect(window.navigator.userAgent)
+        return md.os() === 'iOS' || md.os() === 'AndroidOS'
+      }
+      var isMobile = null
+      setInterval(function() {
+        if (checkMobile() !== isMobile) {
+          isMobile = checkMobile()
+          if (isMobile) {
+            document.getElementById('mobile-frame').className = ""
+          } else {
+            document.getElementById('mobile-frame').className = "marvel-device iphone8 black"
+          }
+        }
+      }, 500)
+    </script>
   </body>
 </html>
